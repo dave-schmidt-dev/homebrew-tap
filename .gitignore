@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Node / JS
+node_modules/
+*.tsbuildinfo
+
+# Secrets / local state (never commit)
+etc/bws-config.txt
+etc/*.local.yaml
+*.local
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.secret
+secrets/
+
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Build / logs
+dist/
+build/
+*.log
+.logs/
+.state/
+
+# Working docs kept local
+HISTORY.md
+TASKS.md
+history.md
+tasks.md
+
+# Agent workflow byproducts
+verifications/
+overnight-log.md
+overnight-report.html
+.verifier_prompt.md
+spikes/
+
+# Personal agent-permission config
+opencode.jsonc
