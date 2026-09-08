@@ -50,8 +50,8 @@ The command above is a placeholder and does not install a current package.
 For each selected project, add a recipe only after its upstream release is
 available. Record the exact release URL, immutable checksum, dependencies,
 supported platforms, and required caveats. Run the project’s meaningful
-verification checks, then run `brew audit --strict` and `brew style` against
-the recipe before publishing it. Recheck installation, upgrade, and removal
+verification checks, then run `brew audit --strict --online` and `brew style`
+against the recipe before publishing it. Recheck installation, upgrade, and removal
 on a clean supported macOS environment.
 
 This tap runs no CI. Every check is local and must pass before a recipe is
