@@ -40,8 +40,7 @@ The command above is a placeholder and does not install a current package.
 | `TASKS.md` | Local queue for pending tap work. |
 | `LICENSE` | MIT license. |
 
-`Formula/` and `Casks/` are planned locations; they are not populated in this
-scaffold.
+`Formula/` and `Casks/` exist but hold no recipes yet.
 
 ## Maintainer workflow
 
@@ -51,6 +50,17 @@ supported platforms, and required caveats. Run the project’s meaningful
 verification checks, then run `brew audit --strict` and `brew style` against
 the recipe before publishing it. Recheck installation, upgrade, and removal
 on a clean supported macOS environment.
+
+This tap runs no CI. Every check is local and must pass before a recipe is
+pushed:
+
+```text
+brew style dave-schmidt-dev/tap
+brew audit --strict --online dave-schmidt-dev/tap/<package>
+brew install --build-from-source dave-schmidt-dev/tap/<package>
+brew test dave-schmidt-dev/tap/<package>
+brew uninstall <package>
+```
 
 This is a personal Zero Delta tap. It is not an official Homebrew repository
 or an endorsement by the Homebrew project.
