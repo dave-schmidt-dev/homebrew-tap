@@ -10,9 +10,11 @@ download, and a documented installation path.
 
 ## Catalog
 
-The catalog is intentionally empty while the projects for the first release
-are being selected. No formulae or casks are installable from this repository
-yet.
+The catalog is empty. The first formula packages
+[gradus](https://github.com/dave-schmidt-dev/gradus); it is written and
+verified locally, and it lands here once gradus has a tagged release whose
+tarball can be checksummed. No formulae or casks are installable from this
+repository yet.
 
 Future installation form, once a package is added and published:
 
@@ -38,6 +40,7 @@ The command above is a placeholder and does not install a current package.
 | `Casks/` | Future Homebrew casks for signed macOS applications. |
 | `HISTORY.md` | Local record of meaningful tap changes. |
 | `TASKS.md` | Local queue for pending tap work. |
+| `INVARIANTS.md` | The contract every recipe here satisfies. |
 | `LICENSE` | MIT license. |
 
 `Formula/` and `Casks/` exist but hold no recipes yet.
@@ -61,6 +64,9 @@ brew install --build-from-source dave-schmidt-dev/tap/<package>
 brew test dave-schmidt-dev/tap/<package>
 brew uninstall <package>
 ```
+
+The full contract, including what is deliberately absent, is in
+[`INVARIANTS.md`](INVARIANTS.md).
 
 This is a personal Zero Delta tap. It is not an official Homebrew repository
 or an endorsement by the Homebrew project.
